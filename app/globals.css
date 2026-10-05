@@ -1,0 +1,52 @@
+:root {
+  --blue: #492ffb;
+  --blue-hover: #410de9;
+  --lilac: #ebe8ff;
+  --sand: #f5f4f0;
+  --bg: #ffffff;
+  --bg-subtle: #f9f9f9;
+  --border: #e5e5e5;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --success: #00a66f;
+  --warn: #e08a00;
+  --error: #e5484d;
+  --radius: 12px;
+  --radius-card: 18px;
+  --font: "TT Photoroom", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --blue: #696eff;
+    --blue-hover: #7f89ff;
+    --lilac: #23214a;
+    --sand: #18191b;
+    --bg: #0f1011;
+    --bg-subtle: #18191b;
+    --border: #2d2e33;
+    --text: #ffffff;
+    --muted: #a0a1a7;
+    --success: #00cc88;
+    --warn: #ffb224;
+    --error: #ff5959;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue); color: #fff; border: 0; border-radius: var(--radius); padding: 14px 22px; font: 600 16px var(--font); cursor: pointer; text-decoration: none; }
+.btn:hover { background: var(--blue-hover); }
+.btn:disabled { opacity: 0.6; cursor: default; }
+.btn.ghost { background: transparent; color: var(--blue); border: 1px solid var(--border); }
+.card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-card); padding: 20px; }
+.muted { color: var(--muted); }
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 0 40px; font-size: 13px; color: var(--muted); }
+main section { margin-top: 36px; }
+h2 { font-size: 22px; margin: 0 0 14px; }
+.small { font-size: 13px; }
+.hero { background: var(--sand); padding: 64px 0 56px; }
+.kicker { color: var(--blue); font-weight: 600; font-size: 14px; margin: 0 0 12px; }
+.h1 { font-size: clamp(32px, 5.5vw, 52px); line-height: 1.08; margin: 0 0 16px; letter-spacing: -0.02em; max-width: 760px; }
+.sub { font-size: 19px; color: var(--muted); margin: 0 0 28px; max-width: 620px; }
